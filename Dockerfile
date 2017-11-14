@@ -1,5 +1,5 @@
 # FROM openjdk:8-jdk
-FROM panyongde/ionic:latest
+FROM panyongde/ionic-framework:latest
 
 # RUN apt-get update && apt-get install -y git curl && rm -rf /var/lib/apt/lists/*
 
