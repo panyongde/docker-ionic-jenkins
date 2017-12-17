@@ -99,3 +99,44 @@ RUN apt-get update && \
     chmod +x /usr/local/bin/docker-compose
 
 # RUN chmod 777 /var/run/docker.sock
+
+###########################################################################################################
+# PHP 7
+###########################################################################################################
+
+RUN apt-get install -y language-pack-en-base
+RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php
+
+RUN apt-get -y update && apt-get -y upgrade && apt-get -y install snmp php7.1 \
+    php7.1-bz2  \
+    php7.1-mbstring \
+    php7.1-cli  \
+    php7.1-common  \
+    php7.1-curl  \
+    php7.1-dev  \
+    php7.1-gd  \
+    php7.1-imap  \
+    php7.1-interbase  \
+    php7.1-intl  \
+    php7.1-json  \
+    php7.1-ldap  \
+    php7.1-mcrypt  \
+    php7.1-mysql  \
+    php7.1-odbc  \
+    php7.1-opcache  \
+    php7.1-pgsql  \
+    php7.1-pspell  \
+    php7.1-readline  \
+    php7.1-recode  \
+    php7.1-snmp  \
+    php7.1-sqlite3  \
+    php7.1-sybase  \
+    php7.1-tidy  \
+    php7.1-xmlrpc \
+    php-mongodb \
+    php-redis \
+    php-apcu \
+    php-amqp \
+    php-memcached
+
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
