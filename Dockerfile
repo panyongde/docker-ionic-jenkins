@@ -141,3 +141,8 @@ RUN apt-get -y update && apt-get -y upgrade && apt-get -y install snmp php7.1 \
     php-memcached
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+###########################################################################################################
+# EXPECT
+###########################################################################################################
+RUN apt-get instll -y expect
