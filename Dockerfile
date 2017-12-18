@@ -145,4 +145,4 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 ###########################################################################################################
 # EXPECT
 ###########################################################################################################
-RUN apt-get instll -y expect
+RUN apt-get install -y expect
